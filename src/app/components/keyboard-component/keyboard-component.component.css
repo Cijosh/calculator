@@ -1,0 +1,15 @@
+.keyboard-pos .btn {
+    width: 50px;
+}
+.display-box{
+    text-align: inherit;
+}
+
+.special-btn{
+    background-color: orange;
+}
+
+.row .btn{
+    box-shadow: -3px 3px #0a58ca, -2px 2px #0a58ca, -1px 1px #0a58ca;
+    border: 1px solid #0a58ca;
+}

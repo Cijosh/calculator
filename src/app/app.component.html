@@ -1,1 +1,31 @@
-<h1><app-keyboard-component></app-keyboard-component></h1>
+
+<!--  <app-keyboard-component></app-keyboard-component> -->
+<div class="main">
+    <div class="h-100 mt-4 d-flex align-items-center justify-content-center">
+        <div class="calmain">
+            <div class="container">
+                <div class="row my-3">
+                    <div class="col-md-8 align-items-left brand-name">CALC</div>
+                    <div class="col-md-4 solar-panel">
+                        <div class="container" style="height:inherit;">
+                            <div class="row" style="height:inherit;">
+                                <div class="col-md-4 border border-secondary border-right"></div>
+                                <div class="col-md-4 border border-secondary border-right"></div>
+                                <div class="col-md-4 border border-secondary border-right"></div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="container">
+                <div class="row mx-1 my-3 display-panel">
+                    <input class="display-box" type="number" disabled [(ngModel)]="displayValue">
+                </div>
+                <div class="row">
+                    <app-keyboard-component (displayValue)="getValue($event)"></app-keyboard-component>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

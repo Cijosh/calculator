@@ -1,7 +1,7 @@
-<div class="container text-center">
-        current {{currentValue}}
+<div class="container text-center keyboard-pos">
     <div class="row d-flex p-2">
-        <div class="col-md-3">
+
+        <div class="col-12 d-flex justify-content-end text-center">
             <button type="button" class="btn btn-secondary btn-square-md" (click)="clear()" >AC</button>
         </div>
     </div>
@@ -59,7 +59,7 @@
            <button type="button" class="btn btn-primary btn-square-md" (click)="calculate()">=</button>
         </div>
         <div class="col-md-3">
-           <button type="button" class="btn btn-primary btn-square-md" (click)="selectOperator('+')">+</button>
+           <button type="button" class="btn btn-primary btn-square-md special-btn" (click)="selectOperator('+')">+</button>
         </div>
     </div>
 </div>

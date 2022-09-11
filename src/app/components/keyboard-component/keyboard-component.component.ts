@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-keyboard-component',
@@ -10,6 +10,7 @@ export class KeyboardComponentComponent implements OnInit {
   stackValue=0;
   operator : string = '';
   dotCounter = false;
+  @Output() displayValue = new EventEmitter<string>();
   
   constructor() { }
 
@@ -19,10 +20,15 @@ export class KeyboardComponentComponent implements OnInit {
     this.dotCounter = false;
     this.currentValue = '0';
     this.stackValue = 0;
+    this.displayValue.emit(this.currentValue);
   }
 
   setNumber(val:number){
+    if(this.currentValue == '0'){
+      this.currentValue = '';
+    }
       this.currentValue=`${this.currentValue}${val}`;
+      this.displayValue.emit(this.currentValue);
   }
 
   setDecimal(){
@@ -40,10 +46,8 @@ export class KeyboardComponentComponent implements OnInit {
   }
 
   calculate() {
-    debugger;
     const a = this.stackValue;
     const b = Number(this.currentValue);
-
     let result : number = 0;
     if (this.operator === '*') {
       result = a * b;
@@ -57,9 +61,9 @@ export class KeyboardComponentComponent implements OnInit {
     else if (this.operator === '-') {
       result = a - b;
     }
-
     this.stackValue = result;
     this.currentValue = result.toString();
+    this.displayValue.emit(this.currentValue);  
   }
 
 }
