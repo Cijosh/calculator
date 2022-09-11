@@ -1,59 +1,65 @@
 <div class="container text-center">
+        current {{currentValue}}
     <div class="row d-flex p-2">
         <div class="col-md-3">
-            <button type="button" class="btn btn-primary btn-square-md">7</button>
+            <button type="button" class="btn btn-secondary btn-square-md" (click)="clear()" >AC</button>
+        </div>
+    </div>
+    <div class="row d-flex p-2">
+        <div class="col-md-3">
+            <button type="button" class="btn btn-primary btn-square-md" (click)="setNumber(7)">7</button>
         </div>
         <div class="col-md-3 ">
-            <button type="button" class="btn btn-primary btn-square-md">8</button>
+            <button type="button" class="btn btn-primary btn-square-md" (click)="setNumber(8)">8</button>
         </div>
         <div class="col-md-3">
-            <button type="button" class="btn btn-primary btn-square-md">9</button>
+            <button type="button" class="btn btn-primary btn-square-md" (click)="setNumber(9)">9</button>
         </div>
         <div class="col-md-3">
-            <button type="button" class="btn btn-primary btn-square-md">÷</button>
+            <button type="button" class="btn btn-primary btn-square-md" (click)="selectOperator('/')">÷</button>
         </div>
         
     </div>
     <div class="row row d-flex p-2">
         <div class="col-md-3">
-            <button type="button" class="btn btn-primary btn-square-md">4</button>
+            <button type="button" class="btn btn-primary btn-square-md" (click)="setNumber(4)">4</button>
         </div>
         <div class="col-md-3">
-            <button type="button" class="btn btn-primary btn-square-md">5</button>
+            <button type="button" class="btn btn-primary btn-square-md" (click)="setNumber(5)">5</button>
         </div>
         <div class="col-md-3">
-            <button type="button" class="btn btn-primary btn-square-md">6</button>
+            <button type="button" class="btn btn-primary btn-square-md" (click)="setNumber(6)">6</button>
         </div>
         <div class="col-md-3">
-            <button type="button" class="btn btn-primary btn-square-md">x</button>
+            <button type="button" class="btn btn-primary btn-square-md" (click)="selectOperator('*')">x</button>
         </div>
     </div>
     <div class="row row d-flex p-2">
         <div class="col-md-3">
-           <button type="button" class="btn btn-primary btn-square-md">1</button>
+           <button type="button" class="btn btn-primary btn-square-md" (click)="setNumber(1)">1</button>
         </div>
         <div class="col-md-3">
-            <button type="button" class="btn btn-primary btn-square-md">2</button>
+            <button type="button" class="btn btn-primary btn-square-md" (click)="setNumber(2)">2</button>
         </div>
         <div class="col-md-3">
-            <button type="button" class="btn btn-primary btn-square-md">3</button>
+            <button type="button" class="btn btn-primary btn-square-md" (click)="setNumber(3)">3</button>
         </div>
         <div class="col-md-3">
-            <button type="button" class="btn btn-primary btn-square-md">-</button>
+            <button type="button" class="btn btn-primary btn-square-md" (click)="selectOperator('-')">-</button>
         </div>
     </div>
     <div class="row row d-flex p-2">
         <div class="col-md-3 ">
-           <button type="button" class="btn btn-primary btn-square-md">0</button>
+           <button type="button" class="btn btn-primary btn-square-md" (click)="setNumber(0)">0</button>
         </div>
         <div class="col-md-3">
-           <button type="button" class="btn btn-primary btn-square-md">.</button>
+           <button type="button" class="btn btn-primary btn-square-md" (click)="setDecimal()">.</button>
         </div>
         <div class="col-md-3">
-           <button type="button" class="btn btn-primary btn-square-md">=</button>
+           <button type="button" class="btn btn-primary btn-square-md" (click)="calculate()">=</button>
         </div>
         <div class="col-md-3">
-           <button type="button" class="btn btn-primary btn-square-md">+</button>
+           <button type="button" class="btn btn-primary btn-square-md" (click)="selectOperator('+')">+</button>
         </div>
     </div>
 </div>
