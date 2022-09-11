@@ -1,6 +1,12 @@
+
+
 # Calculator
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
+
+## Package setup
+
+Need to install Npm package manager , run `npm install` in cmd for installing packages on file with package.json
 
 ## Development server
 
